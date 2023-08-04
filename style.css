@@ -1,0 +1,49 @@
+* {
+  font-family: kanit, sans-serif;
+}
+body{
+  margin: 0;
+  padding: 0;
+}
+
+nav .ul {
+  justify-content: end;
+}
+
+.navbar {
+  background-color: #01074f;
+}
+
+.top-menu {
+  padding: 10px;
+}
+
+.carousel-item {
+  height: 400px;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 10px;
+  justify-items: center;
+  width: 100%;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .card-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
