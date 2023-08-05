@@ -18,25 +18,102 @@
       integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
       crossorigin="anonymous"
     ></script>
+
+    <style>
+      .news {
+        margin-top: 20px;
+      }
+      .agency {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        margin-top: 20px;
+        background-color: #f5f5f5;
+      }
+
+      .website {     
+        margin-top: 20px;
+      }
+
+      .agency img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        padding: 10px;
+      }
+
+      .address {
+        display: flex;
+        margin-top: 20px;
+        justify-content: space-between;
+        background-color: #f5f5f5;
+        padding: 20px;
+        border-radius: 20px;
+      }
+
+      a {
+        text-decoration: none;
+        color: black;
+      }
+
+      h3 {
+        color: #01074f;
+      }
+
+      .map iframe {
+        width: 650px;
+        height: 450px;
+      }
+
+      @media screen and (max-width: 768px) {
+        .agency {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .address {
+          display: flex;
+          flex-direction: column;
+        }
+        .map iframe {
+          width: 100%;
+          height: 300px;
+        }
+      }
+
+    </style>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg" data-bs-theme="dark">
+    <nav class="navbar navbar-expand-lg fixed-top" data-bs-theme="dark">
       <div class="container top-menu">
         <a class="navbar-brand" href="#">
-          <img src="./images/csit_logo.png" alt="Bootstrap" width="40" height="38">
+          <img
+            src="./images/csit_logo.png"
+            alt="Bootstrap"
+            width="40"
+            height="38"
+          />
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="index.html">หน้าหลัก</a>
+              <a class="nav-link active" aria-current="page" href="index.html"
+                >หน้าหลัก</a
+              >
             </li>
             <li class="nav-item">
               <a class="nav-link" href="lecturer.html">บุคลากร</a>
@@ -51,7 +128,13 @@
               <a class="nav-link" href="calendar.html">ปฎิทินการศึกษา</a>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
                 เอกสาร
               </a>
               <ul class="dropdown-menu">
@@ -67,110 +150,121 @@
       </div>
     </nav>
     <div class="container">
-      <h1>สาขาวิทยาการคอมพิวเตอร์</h1>
-      <div id="carouselExample" class="carousel slide">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="./images/view.jpg" class="d-block w-100" alt="...">
+      <div class="box-top"> 
+        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="https://sci.rmutk.ac.th/wp-content/uploads/2023/06/Banner_Web_%E0%B8%AA%E0%B8%B2%E0%B8%AA%E0%B9%8C%E0%B8%99%E0%B8%84%E0%B8%93%E0%B8%9A%E0%B8%94%E0%B8%B5%E0%B8%96%E0%B8%B6%E0%B8%87%E0%B8%99%E0%B8%A8_aa-01-scaled.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="https://sci.rmutk.ac.th/wp-content/uploads/2023/05/%E0%B8%84%E0%B8%93%E0%B8%9A%E0%B8%94%E0%B8%B5_slider-web-01-scaled.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="https://sci.rmutk.ac.th/wp-content/uploads/2023/05/%E0%B8%84%E0%B8%93%E0%B8%9A%E0%B8%94%E0%B8%B5_slidergraphic___-02-scaled.jpg" class="d-block w-100" alt="...">
+            </div>
           </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
       </div>
+      
       <div class="container">
-        <h3>ข่าวสาร</h3>
-        <div class="card-grid">
-          <div class="col">
-            <div class="card">
-              <img
-                src="http://www.cs.rmutk.ac.th/image/ITPE.jpg"
-                class="card-img-top"
-                alt="..."
-              />
-              <div class="card-body">
-                <h5 class="card-title">กำหนดการสอบ ITPE ประจำปี 2566 รอบเดือนตุลาคม</h5>
-                โพสต์เมื่อ 25 กันยายน 2566
+        <div class="news">
+          <div class="title">
+            <h3>ข่าวสาร</h3>
+            <small>News</small>
+          </div>
+          <hr>
+          <div class="card-grid">
+            <div class="col">
+              <div class="card">
+                <img
+                  src="http://www.cs.rmutk.ac.th/image/ITPE.jpg"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title">
+                    กำหนดการสอบ ITPE ประจำปี 2566 รอบเดือนตุลาคม
+                  </h5>
+                  โพสต์เมื่อ 25 กันยายน 2566
+                </div>
               </div>
             </div>
           </div>
         </div>
-        <h1>ผลงานนักศึกษา</h1>
-        <div class="row">
-          <div class="col">
-            <div class="card" style="width: 18rem;">
-              <img src="..." class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-              </div>
-            </div>
+
+        <div class="website">
+          <div class="title">
+            <h3>เว็บไซต์</h3>
+            <small>Website</small>
           </div>
-          <div class="col">
-            <div class="card" style="width: 18rem;">
-              <img src="..." class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card" style="width: 18rem;">
-              <img src="..." class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card" style="width: 18rem;">
-              <img src="..." class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-              </div>
-            </div>
+          <hr>
+          <div class="agency">
+            <a target="_blank" href="https://www.rmutk.ac.th/">
+              <img src="./images/RMUTK.jpg" alt="rmutk">
+            </a>
+            <a target="_blank" href="https://sci.rmutk.ac.th/">
+              <img src="./images/science.png" alt="science">
+            </a>
+            <a target="_blank" href="https://ascar.rmutk.ac.th/">
+              <img src="./images/ascarnew.png" alt="ascar">
+            </a>
+            <a target="_blank" href="https://admission.rmutk.ac.th/">
+              <img src="./images/assmission.png" alt="assmission">
+            </a>
+            <a target="_blank" href="https://oce.rmutk.ac.th/oce/">
+              <img src="./images/oce.png" alt="oce">
+            </a>
           </div>
         </div>
+        
+
+        
       </div>
 
-      <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-2 py-5 my-5 border-top">
-        <div class="col-2 mb-3" bis_skin_checked="1">
-          <a href="/" class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none">
-            <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
-          </a>
+      <div class="address">
+        <div>
+          <div class="title">
+            <h3>ที่อยู่</h3>
+            <small>Address</small>
+          </div>
           <p>
-            สาขาวิชาวิทยาการคอมพิวเตอร์ / สาขาวิชาเทคโนโลยีสารสนเทศ <br>
-            คณะวิทยาศาสตร์และเทคโนโลยี ภาควิชาคณิตศาสตร์และวิทยาการคอมพิวเตอร์ <br>
-            มหาวิทยาลัยเทคโนโลยีราชมงคลกรุงเทพ <br>
-            อาคาร 80 พรรษา บรมราชินีนาถ ชั้น 9-10 <br>
-            เลขที่ 2 ถนนนางลิ้นจี่ แขวงทุ่งมหาเมฆ เขตสาทร กรุงเทพมหานคร 10120 <br>
+            สาขาวิชาวิทยาการคอมพิวเตอร์ / สาขาวิชาเทคโนโลยีสารสนเทศ <br />
+            คณะวิทยาศาสตร์และเทคโนโลยี ภาควิชาคณิตศาสตร์และวิทยาการคอมพิวเตอร์
+            <br />
+            มหาวิทยาลัยเทคโนโลยีราชมงคลกรุงเทพ <br />
+            อาคาร 80 พรรษา บรมราชินีนาถ ชั้น 9-10 <br />
+            เลขที่ 2 ถนนนางลิ้นจี่ แขวงทุ่งมหาเมฆ เขตสาทร กรุงเทพมหานคร 10120
+            <br />
+            <div class="contact">
+              <div class="title">
+                <h3>ติดต่อเรา</h3>
+                <small>Contact Us</small>
+              </div>
+              <i class="bi bi-telephone-fill"></i>
+              Tel : <a href="tel:022879600">0 2287 9600</a> ต่อ 7018, 7065 <br>
+              <i class="bi bi-envelope-fill"></i>
+              Email : <a href="mailto:csit.utk@mail.rmutk.ac.th">csit.utk@mail.rmutk.ac.th</a>
+            </div>     
           </p>
-          <p class="text-body-secondary">© 2023 Computer science & Information technology  | RMUTK</p>
         </div>
-
-        <div class="col mb-3 justify-content-end" bis_skin_checked="1">
-          <h5>Section</h5>
-          <ul class="nav flex-column justify-content-end">
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
-          </ul>
+        <div class="map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d470.7184151166958!2d100.53813702371315!3d13.71287063979141!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e29f41cb4cbb7f%3A0x6ff6635d96282815!2z4LiE4LiT4Liw4Lin4Li04LiX4Lii4Liy4Lio4Liy4Liq4LiV4Lij4LmM4LmB4Lil4Liw4LmA4LiX4LiE4LmC4LiZ4LmC4Lil4Lii4Li1IOC4oeC4l-C4oy7guIHguKPguLjguIfguYDguJfguJ4!5e0!3m2!1sth!2sth!4v1691233379243!5m2!1sth!2sth" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
-      </footer>
+      </div>
     </div>
+    <footer class="">
+      <div class="container">
+        © 2023 Computer science & Information technology | RMUTK. All rights reserved. <br>
+        <span>Made with : Danunai Sangkachalaw</span>
+      </div>
+    </footer>
   </body>
 </html>

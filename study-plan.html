@@ -25,7 +25,7 @@
     ></script>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg" data-bs-theme="dark">
+    <nav class="navbar navbar-expand-lg fixed-top" data-bs-theme="dark">
       <div class="container top-menu">
         <a class="navbar-brand" href="#">
           <img
@@ -95,9 +95,9 @@
             color: #fdfdfd;
             border-radius: 5px;
             padding: 10px;
+            gap: 30px;
         }
         li {
-            margin-right: 10px;
             cursor: pointer;
         }
         .container iframe {
@@ -113,6 +113,7 @@
         }
     </script>
     <div class="container">
+      <div class="box-top">
         <h1>แผนการเรียน</h1>
         <ul class="plan">
             <li onclick="changeImage('http://www.cs.rmutk.ac.th/web/curriculum/studyplan_id66_CS.jpg')">รหัส 66 CS</li>
@@ -130,6 +131,7 @@
         <div>
             <iframe id="imageFrame" src="http://www.cs.rmutk.ac.th/web/curriculum/studyplan_id66_CS.jpg" alt="cs"></iframe>
         </div>
+      </div>
     </div>
   </body>
 </html>

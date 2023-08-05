@@ -1,5 +1,7 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
 * {
   font-family: kanit, sans-serif;
+  
 }
 body{
   margin: 0;
@@ -30,10 +32,24 @@ nav .ul {
   width: 100%;
 }
 
-h3 {
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin: 0;
+.box-top {
+  margin-top: 100px;
+}
+
+.title {
+  display: flex;
+}
+
+.title small {
+  padding-top: 11px;
+  margin-left: 5px;
+}
+
+footer {
+  background-color: #01074f;
+  color: white;
+  padding: 20px;
+  margin-top: 20px;
 }
 
 @media (min-width: 768px) {
