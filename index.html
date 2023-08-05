@@ -26,17 +26,81 @@
     ></script>
 
     <style>
+      .box-top {
+        margin-top: 50px;
+      }
+
+      .banner img {
+        position: relative;
+        width: 100%;
+        height: 600px;
+        object-fit: cover;
+      }
+
+      .banner-title {
+        position: absolute;
+        top: 30%;
+        left: 35%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-size: 50px;
+        font-weight: bold;
+      }
+
       .news {
         margin-top: 20px;
       }
-      .agency {
+
+      .card-grid {
         display: grid;
-        grid-template-columns: repeat(5, 1fr);
-        margin-top: 20px;
-        background-color: #f5f5f5;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 10px;
+        justify-items: center;
+        width: 100%;
+      }
+
+      @media (min-width: 768px) {
+        .card-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media (min-width: 1400px) {
+        .card-grid {
+          grid-template-columns: repeat(4, 1fr);
+        }
+      }
+
+      .card {
+        border-radius: 10px;
+        border: none;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .card:hover {
+        border-radius: 10px;
+        border: none;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        cursor: pointer;
       }
 
       .website {     
+        margin-top: 20px;
+        padding: 20px 0;
+        background-color: #01074f;
+      }
+      
+      .website h3 {
+        color: white;
+      }
+
+      .website small {
+        color: white;
+      }
+
+      .agency {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
         margin-top: 20px;
       }
 
@@ -45,13 +109,24 @@
         height: 100%;
         object-fit: cover;
         padding: 10px;
+        border-radius: 20px;
+        opacity: 0.9;
+      }
+
+      .agency img:hover {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        padding: 10px;
+        border-radius: 20px;
+        opacity: 1;
       }
 
       .address {
         display: flex;
         margin-top: 20px;
         justify-content: space-between;
-        background-color: #f5f5f5;
+        background-color: whitesmoke;
         padding: 20px;
         border-radius: 20px;
       }
@@ -59,10 +134,6 @@
       a {
         text-decoration: none;
         color: black;
-      }
-
-      h3 {
-        color: #01074f;
       }
 
       .map iframe {
@@ -81,6 +152,17 @@
         .map iframe {
           width: 100%;
           height: 300px;
+        }
+      }
+
+      @media screen and (max-width: 991px) {
+        .address {
+          display: flex;
+          flex-direction: column;
+        }
+        .map iframe {
+          width: 100%;
+          height: 250px;
         }
       }
 
@@ -116,7 +198,7 @@
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="lecturer.html">บุคลากร</a>
+              <a class="nav-link" href="lecturer.html">คณาจารย์</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="course-syllabus.html">หลักสูตร</a>
@@ -149,8 +231,17 @@
         </div>
       </div>
     </nav>
+
+    <div class="banner">
+      <img src="./images/banner.jpg" alt="">
+      <div class="banner-title">
+        <h1>Computer Science</h1>
+        <b>สาขาวิชาวิทยาการคอมพิวเตอร์</b>
+        <h4>คณะวิทยาศาสตร์และเทคโนโลยี</h4>
+      </div>
+    </div>
     <div class="container">
-      <div class="box-top"> 
+      <div style="margin-top: 20px;"> 
         <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
           <div class="carousel-inner">
             <div class="carousel-item active">
@@ -173,64 +264,63 @@
           </button>
         </div>
       </div>
-      
-      <div class="container">
-        <div class="news">
-          <div class="title">
-            <h3>ข่าวสาร</h3>
-            <small>News</small>
-          </div>
-          <hr>
-          <div class="card-grid">
-            <div class="col">
-              <div class="card">
-                <img
-                  src="http://www.cs.rmutk.ac.th/image/ITPE.jpg"
-                  class="card-img-top"
-                  alt="..."
-                />
-                <div class="card-body">
-                  <h5 class="card-title">
-                    กำหนดการสอบ ITPE ประจำปี 2566 รอบเดือนตุลาคม
-                  </h5>
-                  โพสต์เมื่อ 25 กันยายน 2566
-                </div>
+
+      <div class="news">
+        <div class="title">
+          <h3>ข่าวสาร</h3>
+          <small>News</small>
+        </div>
+        <hr class="line">
+        <div class="card-grid">
+          <div class="col">
+            <div class="card">
+              <img
+                src="http://www.cs.rmutk.ac.th/image/ITPE.jpg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">
+                  กำหนดการสอบ ITPE ประจำปี 2566 รอบเดือนตุลาคม
+                </h5>
+                โพสต์เมื่อ 25 กันยายน 2566
               </div>
             </div>
           </div>
         </div>
-
-        <div class="website">
-          <div class="title">
-            <h3>เว็บไซต์</h3>
-            <small>Website</small>
-          </div>
-          <hr>
-          <div class="agency">
-            <a target="_blank" href="https://www.rmutk.ac.th/">
-              <img src="./images/RMUTK.jpg" alt="rmutk">
-            </a>
-            <a target="_blank" href="https://sci.rmutk.ac.th/">
-              <img src="./images/science.png" alt="science">
-            </a>
-            <a target="_blank" href="https://ascar.rmutk.ac.th/">
-              <img src="./images/ascarnew.png" alt="ascar">
-            </a>
-            <a target="_blank" href="https://admission.rmutk.ac.th/">
-              <img src="./images/assmission.png" alt="assmission">
-            </a>
-            <a target="_blank" href="https://oce.rmutk.ac.th/oce/">
-              <img src="./images/oce.png" alt="oce">
-            </a>
-          </div>
-        </div>
-        
-
-        
       </div>
+    </div>
 
+    <div class="website">
+      <div class="container">
+        <div class="title">
+          <h3>เว็บไซต์</h3>
+          <small>Website</small>
+        </div>
+        <hr class="line" style="color: whitesmoke;">
+        <div class="agency">
+          <a target="_blank" href="https://www.rmutk.ac.th/">
+            <img src="./images/RMUTK.jpg" alt="rmutk">
+          </a>
+          <a target="_blank" href="https://sci.rmutk.ac.th/">
+            <img src="./images/science.png" alt="science">
+          </a>
+          <a target="_blank" href="https://ascar.rmutk.ac.th/">
+            <img src="./images/ascarnew.png" alt="ascar">
+          </a>
+          <a target="_blank" href="https://admission.rmutk.ac.th/">
+            <img src="./images/assmission.png" alt="assmission">
+          </a>
+          <a target="_blank" href="https://oce.rmutk.ac.th/oce/">
+            <img src="./images/oce.png" alt="oce">
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
       <div class="address">
-        <div>
+        <div class="container">
           <div class="title">
             <h3>ที่อยู่</h3>
             <small>Address</small>
@@ -260,10 +350,10 @@
         </div>
       </div>
     </div>
-    <footer class="">
+    <footer>
       <div class="container">
         © 2023 Computer science & Information technology | RMUTK. All rights reserved. <br>
-        <span>Made with : Danunai Sangkachalaw</span>
+        <span><i class="bi bi-code-slash"></i> Made with : Danunai Sangkachalaw</span>
       </div>
     </footer>
   </body>

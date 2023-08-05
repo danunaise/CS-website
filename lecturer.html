@@ -23,6 +23,44 @@
       integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
       crossorigin="anonymous"
     ></script>
+    <style>
+      .card-grid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 10px;
+        justify-items: center;
+        width: 100%;
+      }
+
+      .badge-card {
+        position: absolute;
+        bottom: 105px;
+        left: 50%;
+        padding: 0.5rem 0.75rem;
+        font-size: 0.75rem;
+        font-weight: 600;
+        color: #fff;
+        background-color: #ece913;
+        color: #000000ab;
+        border-radius: 0.25rem;
+        transform: translateX(-50%);
+        white-space: nowrap;
+        margin-bottom: 10px;
+      }
+
+      @media (min-width: 768px) {
+        .card-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media (min-width: 1400px) {
+        .card-grid {
+          grid-template-columns: repeat(4, 1fr);
+        }
+      }
+
+    </style>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg fixed-top" data-bs-theme="dark">
@@ -54,16 +92,16 @@
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="lecturer.html">บุคลากร</a>
+              <a class="nav-link active" href="lecturer.html">คณาจารย์</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">หลักสูตร</a>
+              <a class="nav-link" href="course-syllabus.html">หลักสูตร</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">แผนการเรียน</a>
+              <a class="nav-link" href="study-plan.html">แผนการเรียน</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">ปฎิทินการศึกษา</a>
+              <a class="nav-link" href="calendar.html">ปฎิทินการศึกษา</a>
             </li>
             <li class="nav-item dropdown">
               <a
@@ -88,26 +126,12 @@
       </div>
     </nav>
 
-    <style>
-      .badge-card {
-        position: absolute;
-        bottom: 85px;
-        left: 50%;
-        padding: 0.5rem 0.75rem;
-        font-size: 0.75rem;
-        font-weight: 600;
-        color: #fff;
-        background-color: #212529;
-        border-radius: 0.25rem;
-        transform: translateX(-50%);
-        white-space: nowrap;
-        margin-bottom: 10px;
-      }
-    </style>
     <div class="container text-center">
       <div class="box-top">
-        <h2>บุคลากร</h2>
-        <small>สาขาวิชาวิทยาการคอมพิวเตอร์</small>
+        <div class="title" style="text-align: center;">
+          <h3>คณาจารย์</h3>
+          <small>Staff of teachers</small>
+        </div>
         <div class="card-grid">
           <div class="col">
             <div class="card">
@@ -124,9 +148,11 @@
               </div>
               <div class="card-body">
                 <h5 class="card-title">นางสาวมนรดา ศิริมงคล</h5>
-                <a href="mailto:monrada.s@mail.rmutk.ac.th" class="btn"
-                  >monrada.s@mail.rmutk.ac.th</a
-                >
+                Ms. Monrada Sirimongkol  
+                <a href="mailto:monrada.s@mail.rmutk.ac.th" class="btn">
+                  <i class="bi bi-envelope-at"></i>
+                  monrada.s@mail.rmutk.ac.th
+                </a>
               </div>
             </div>
           </div>
@@ -140,9 +166,11 @@
               <small class="badge-card">รองอธิการบดี</small>
               <div class="card-body">
                 <h5 class="card-title">ผศ.นพรัตน์ ภัยวิมุติ</h5>
-                <a href="mailto:nopparat.p@mail.rmutk.ac.th" class="btn"
-                  >nopparat.p@mail.rmutk.ac.th</a
-                >
+                Asst. Prof. Nopparat Paivimut
+                <a href="mailto:nopparat.p@mail.rmutk.ac.th" class="btn">
+                  <i class="bi bi-envelope-at"></i>
+                  nopparat.p@mail.rmutk.ac.th
+                </a>
               </div>
             </div>
           </div>
@@ -153,11 +181,14 @@
                 class="card-img-top"
                 alt="..."
               />
+              <small class="badge-card">อาจารย์ประจำภาควิชา</small>
               <div class="card-body">
                 <h5 class="card-title">ดร.ธวัชชัย สารวงษ์</h5>
-                <a href="mailto:thawatchai.s@mail.rmutk.ac.th" class="btn"
-                  >thawatchai.s@mail.rmutk.ac.th</a
-                >
+                Thawatchai Sarawong, Ph.D.
+                <a href="mailto:thawatchai.s@mail.rmutk.ac.th" class="btn">
+                  <i class="bi bi-envelope-at"></i>
+                  thawatchai.s@mail.rmutk.ac.th
+                </a>
               </div>
             </div>
           </div>
@@ -168,11 +199,14 @@
                 class="card-img-top"
                 alt="..."
               />
+              <small class="badge-card">อาจารย์ประจำภาควิชา</small>
               <div class="card-body">
                 <h5 class="card-title">ดร.ปิยะ ถิรพันธุ์เมธี</h5>
-                <a href="mailto:piya@mail.rmutk.ac.th" class="btn"
-                  >piya@mail.rmutk.ac.th</a
-                >
+                Piya Thirapanmethee, Ph.D.
+                <a href="mailto:piya@mail.rmutk.ac.th" class="btn">
+                  <i class="bi bi-envelope-at"></i>
+                  piya@mail.rmutk.ac.th
+                </a>
               </div>
             </div>
           </div>
@@ -183,11 +217,14 @@
                 class="card-img-top"
                 alt="..."
               />
+              <small class="badge-card">อาจารย์ประจำภาควิชา</small>
               <div class="card-body">
-                <h5 class="card-title">ผศ ดร.อรสา พัสดุ</h5>
-                <a href="mailto:orasa.p@mail.rmutk.ac.th" class="btn"
-                  >orasa.p@mail.rmutk.ac.th</a
-                >
+                <h5 class="card-title">ผศ.ดร.อรสา พัสดุ</h5>
+                Asst. Prof. Orasa Patsadu, Ph.D.
+                <a href="mailto:orasa.p@mail.rmutk.ac.th" class="btn">
+                  <i class="bi bi-envelope-at"></i>
+                  orasa.p@mail.rmutk.ac.th
+                </a>
               </div>
             </div>
           </div>
@@ -198,11 +235,14 @@
                 class="card-img-top"
                 alt="..."
               />
+              <small class="badge-card">อาจารย์ประจำภาควิชา</small>
               <div class="card-body">
                 <h5 class="card-title">นายฉัตรชัย รักถิ่น</h5>
-                <a href="mailto:chatchai.r@mail.rmutk.ac.th" class="btn"
-                  >chatchai.r@mail.rmutk.ac.th</a
-                >
+                Mr. Chatchai Rakthin
+                <a href="mailto:chatchai.r@mail.rmutk.ac.th" class="btn">
+                  <i class="bi bi-envelope-at"></i>
+                  chatchai.r@mail.rmutk.ac.th
+                </a>
               </div>
             </div>
           </div>
@@ -213,11 +253,14 @@
                 class="card-img-top"
                 alt="..."
               />
+              <small class="badge-card">อาจารย์ประจำภาควิชา</small>
               <div class="card-body">
                 <h5 class="card-title">นางกุลชยา พงษ์แสวง</h5>
-                <a href="mailto:kulchaya.p@mail.rmutk.ac.th" class="btn"
-                  >kulchaya.p@mail.rmutk.ac.th</a
-                >
+                Mrs. Kulchaya Pongsawaeng
+                <a href="mailto:kulchaya.p@mail.rmutk.ac.th" class="btn">
+                  <i class="bi bi-envelope-at"></i>
+                  kulchaya.p@mail.rmutk.ac.th
+                </a>
               </div>
             </div>
           </div>
@@ -228,11 +271,14 @@
                 class="card-img-top"
                 alt="..."
               />
+              <small class="badge-card">อาจารย์ประจำภาควิชา</small>
               <div class="card-body">
                 <h5 class="card-title">นางศรีสุดา สรนันต์ศรี</h5>
-                <a href="mailto:srisuda.s@mail.rmutk.ac.th" class="btn"
-                  >srisuda.s@mail.rmutk.ac.th</a
-                >
+                Mrs. Srisuda Soranunsri
+                <a href="mailto:srisuda.s@mail.rmutk.ac.th" class="btn">
+                  <i class="bi bi-envelope-at"></i>
+                  srisuda.s@mail.rmutk.ac.th
+                </a>
               </div>
             </div>
           </div>
@@ -243,11 +289,14 @@
                 class="card-img-top"
                 alt="..."
               />
+              <small class="badge-card">อาจารย์ประจำภาควิชา</small>
               <div class="card-body">
                 <h5 class="card-title">นายชาญวิทย์ มุสิกะ</h5>
-                <a href="mailto:chanwit@mail.rmutk.ac.th" class="btn"
-                  >chanwit@mail.rmutk.ac.th</a
-                >
+                Mr. Chanwit Musika
+                <a href="mailto:chanwit@mail.rmutk.ac.th" class="btn">
+                  <i class="bi bi-envelope-at"></i>
+                  chanwit@mail.rmutk.ac.th
+                </a>
               </div>
             </div>
           </div>
@@ -258,11 +307,14 @@
                 class="card-img-top"
                 alt="..."
               />
+              <small class="badge-card">อาจารย์ประจำภาควิชา</small>
               <div class="card-body">
                 <h5 class="card-title">นางสาวชนาเนตร อรรถยุกติ</h5>
-                <a href="mailto:chananate@mail.rmutk.ac.th" class="btn"
-                  >chananate@mail.rmutk.ac.th</a
-                >
+                Ms. Chananate Arthayukti
+                <a href="mailto:chananate@mail.rmutk.ac.th" class="btn">
+                  <i class="bi bi-envelope-at"></i>
+                  chananate@mail.rmutk.ac.th
+                </a>
               </div>
             </div>
           </div>
@@ -273,11 +325,14 @@
                 class="card-img-top"
                 alt="..."
               />
+              <small class="badge-card">อาจารย์ประจำภาควิชา</small>
               <div class="card-body">
                 <h5 class="card-title">นางสาวสุรีพร นวลนิ่ม</h5>
-                <a href="mailto:sureeporn.n@mail.rmutk.ac.th" class="btn"
-                  >sureeporn.n@mail.rmutk.ac.th</a
-                >
+                Ms. Sureeporn Nualnim
+                <a href="mailto:sureeporn.n@mail.rmutk.ac.th" class="btn">
+                  <i class="bi bi-envelope-at"></i>
+                  sureeporn.n@mail.rmutk.ac.th
+                </a>
               </div>
             </div>
           </div>
@@ -288,11 +343,14 @@
                 class="card-img-top"
                 alt="..."
               />
+              <small class="badge-card">อาจารย์ประจำภาควิชา</small>
               <div class="card-body">
                 <h5 class="card-title">นายสถิระ ชัยชนะกลาง</h5>
-                <a href="mailto:sathera.ch@mail.rmutk.ac.th" class="btn"
-                  >sathera.ch@mail.rmutk.ac.th</a
-                >
+                Mr. Satira Chaichanaklang
+                <a href="mailto:sathera.ch@mail.rmutk.ac.th" class="btn">
+                  <i class="bi bi-envelope-at"></i>
+                  sathera.ch@mail.rmutk.ac.th
+                </a>
               </div>
             </div>
           </div>
@@ -303,11 +361,14 @@
                 class="card-img-top"
                 alt="..."
               />
+              <small class="badge-card">อาจารย์ประจำภาควิชา</small>
               <div class="card-body">
                 <h5 class="card-title">นางสาวนิลุบล บุตรไชย</h5>
-                <a href="mailto:nilubon.b@mail.rmutk.ac.th" class="btn"
-                  >nilubon.b@mail.rmutk.ac.th</a
-                >
+                Ms. Nilubon Bootchai
+                <a href="mailto:nilubon.b@mail.rmutk.ac.th" class="btn">
+                  <i class="bi bi-envelope-at"></i>
+                  nilubon.b@mail.rmutk.ac.th
+                </a>
               </div>
             </div>
           </div>
@@ -318,11 +379,13 @@
                 class="card-img-top"
                 alt="..."
               />
+              <small class="badge-card">อาจารย์ประจำภาควิชา</small>
               <div class="card-body">
                 <h5 class="card-title">นายศุภฤกษ์ ฉัตรธนโชติ</h5>
-                <a href="mailto:supharoek.c@mail.rmutk.ac.th" class="btn"
-                  >supharoek.c@mail.rmutk.ac.th</a
-                >
+                Mr. Supharoek Chattanachot
+                <a href="mailto:supharoek.c@mail.rmutk.ac.th" class="btn">
+                  supharoek.c@mail.rmutk.ac.th
+                </a>
               </div>
             </div>
           </div>
@@ -333,16 +396,25 @@
                 class="card-img-top"
                 alt="..."
               />
+              <small class="badge-card">อาจารย์ประจำภาควิชา</small>
               <div class="card-body">
                 <h5 class="card-title">นางสาวสิริอร นุชผดุง</h5>
-                <a href="mailto:sirion.n@mail.rmutk.ac.th" class="btn"
-                  >sirion.n@mail.rmutk.ac.th</a
-                >
+                Ms. Sirion Nutphadung
+                <a href="mailto:sirion.n@mail.rmutk.ac.th" class="btn">
+                  <i class="bi bi-envelope-at"></i>
+                  sirion.n@mail.rmutk.ac.th
+                </a>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+    <footer>
+      <div class="container">
+        © 2023 Computer science & Information technology | RMUTK. All rights reserved. <br>
+        <span><i class="bi bi-code-slash"></i> Made with : Danunai Sangkachalaw</span>
+      </div>
+    </footer>
   </body>
 </html>

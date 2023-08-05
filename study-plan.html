@@ -23,6 +23,41 @@
       integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
       crossorigin="anonymous"
     ></script>
+    <style>
+      .plan {
+          display: flex;
+          flex-wrap: wrap;
+          list-style-type: none;
+          background-color: #01074f;
+          color: #fdfdfd;
+          border-radius: 5px;
+          padding: 10px;
+          gap: 30px;
+      }
+
+      li {
+          cursor: pointer;
+      }
+      #imageFrame {
+          width: 100%;
+          height: 800px;
+          border: #01074f 2px solid;
+      }
+
+      @media screen and (min-width: 1224px) {
+        #imageFrame {
+          width: 1100px;
+          height: 800px;
+          border: #01074f 2px solid;
+        }
+      }
+    </style>
+    <script>
+        function changeImage(link) {
+            var iframe = document.getElementById('imageFrame');
+            iframe.src = link;
+        }
+    </script>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg fixed-top" data-bs-theme="dark">
@@ -54,16 +89,16 @@
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="lecturer.html">บุคลากร</a>
+              <a class="nav-link" href="lecturer.html">คณาจารย์</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">หลักสูตร</a>
+              <a class="nav-link" href="course-syllabus.html">หลักสูตร</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">แผนการเรียน</a>
+              <a class="nav-link active" href="study-plan.html">แผนการเรียน</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">ปฎิทินการศึกษา</a>
+              <a class="nav-link" href="calendar.html">ปฎิทินการศึกษา</a>
             </li>
             <li class="nav-item dropdown">
               <a
@@ -87,34 +122,12 @@
         </div>
       </div>
     </nav>
-    <style>
-        .plan {
-            display: flex;
-            list-style-type: none;
-            background-color: #01074f;
-            color: #fdfdfd;
-            border-radius: 5px;
-            padding: 10px;
-            gap: 30px;
-        }
-        li {
-            cursor: pointer;
-        }
-        .container iframe {
-            width: 1100px;
-            height: 700px;
-            border: #01074f 2px solid;
-        }
-    </style>
-    <script>
-        function changeImage(link) {
-            var iframe = document.getElementById('imageFrame');
-            iframe.src = link;
-        }
-    </script>
     <div class="container">
       <div class="box-top">
-        <h1>แผนการเรียน</h1>
+        <div class="title">
+          <h3>แผนการเรียน</h3>
+          <small>Studyplan</small>
+        </div>
         <ul class="plan">
             <li onclick="changeImage('http://www.cs.rmutk.ac.th/web/curriculum/studyplan_id66_CS.jpg')">รหัส 66 CS</li>
             <li onclick="changeImage('http://www.cs.rmutk.ac.th/web/curriculum/studyplan_id66_IT.jpg')">รหัส 66 IT</li>
@@ -127,11 +140,16 @@
             <li onclick="changeImage('http://www.cs.rmutk.ac.th/web/curriculum/studyplan_id62_CS.jpg')">รหัส 62 CS</li>
             <li onclick="changeImage('http://www.cs.rmutk.ac.th/web/curriculum/studyplan_id62_IT.jpg')">รหัส 62 IT</li>
         </ul>
-
-        <div>
+        <div class="container">
             <iframe id="imageFrame" src="http://www.cs.rmutk.ac.th/web/curriculum/studyplan_id66_CS.jpg" alt="cs"></iframe>
         </div>
       </div>
     </div>
+    <footer>
+      <div class="container">
+        © 2023 Computer science & Information technology | RMUTK. All rights reserved. <br>
+        <span><i class="bi bi-code-slash"></i> Made with : Danunai Sangkachalaw</span>
+      </div>
+    </footer>
   </body>
 </html>

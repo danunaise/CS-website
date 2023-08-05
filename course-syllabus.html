@@ -23,6 +23,13 @@
       integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
       crossorigin="anonymous"
     ></script>
+    
+    <style>
+      a {
+        text-decoration: none;
+        color: #000;
+      }
+    </style>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg fixed-top" data-bs-theme="dark">
@@ -49,15 +56,15 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="index.html"
+              <a class="nav-link" aria-current="page" href="index.html"
                 >หน้าหลัก</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="lecturer.html">บุคลากร</a>
+              <a class="nav-link" href="lecturer.html">คณาจารย์</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="course-syllabus.html">หลักสูตร</a>
+              <a class="nav-link active" href="course-syllabus.html">หลักสูตร</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="study-plan.html">แผนการเรียน</a>
@@ -88,16 +95,12 @@
       </div>
     </nav>
 
-    <style>
-      a {
-        text-decoration: none;
-        color: #000;
-      }
-    </style>
-
     <div class="container">
       <div class="box-top">
-        <h3>หลักสูตร</h3>
+        <div class="title">
+          <h3>หลักสูตร</h3>
+          <small>Coursesyllabus</small>
+        </div>
         <p>2564</p>
         <ul>
           <li>
@@ -163,5 +166,11 @@
         </ul>
       </div>
     </div>
+    <footer style="margin-top: 420px;">
+      <div class="container">
+        © 2023 Computer science & Information technology | RMUTK. All rights reserved. <br>
+        <span><i class="bi bi-code-slash"></i> Made with : Danunai Sangkachalaw</span>
+      </div>
+    </footer>
   </body>
 </html>

@@ -24,14 +24,6 @@ nav .ul {
   height: 400px;
 }
 
-.card-grid {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  grid-gap: 10px;
-  justify-items: center;
-  width: 100%;
-}
-
 .box-top {
   margin-top: 100px;
 }
@@ -45,6 +37,10 @@ nav .ul {
   margin-left: 5px;
 }
 
+hr.line {
+  margin-top: 0px;
+}
+
 footer {
   background-color: #01074f;
   color: white;
@@ -52,14 +48,4 @@ footer {
   margin-top: 20px;
 }
 
-@media (min-width: 768px) {
-  .card-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
 
-@media (min-width: 1024px) {
-  .card-grid {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
